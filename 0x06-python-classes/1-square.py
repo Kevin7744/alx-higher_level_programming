@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" class definition Square """
+""" Define class Square """
 
 
 class Square:
-    """ Size private attribute initialized in self constructor """"
+    """ Class properties based on: (0-square.py)."""
     def __init__(self, size):
-        """ Create a new instance of square which is of 1 side
-        size: the size of the square
+        """ Create a new instance of square which is (1 side)
+        Args: size: the size of  square
         """
         self.__size = size
