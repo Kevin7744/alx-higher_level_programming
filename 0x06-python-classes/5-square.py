@@ -3,12 +3,12 @@
 
 
 class Square:
-
+    """ Private instance of attribute size """
     def __init__(self, size=0):
         """ Creates a new instance square
 
-            Args:
-                Size: must be an integer and not less than (0).
+        Args:
+            Size: must be an integer and not less than (0).
         """
         self.__size = size
 
