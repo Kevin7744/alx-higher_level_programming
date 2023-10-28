@@ -1,0 +1,27 @@
+=====================================================
+Define function 'add_integer()' that add two integers
+=====================================================
+    ::
+    Adds two integers or float.
+
+    Parameters:
+    a (int or float): The first number.
+    b (int or float): The second number. Defaults to 98.
+
+    Returns:
+    int: The addition of a and b.
+
+    Raise:
+    TypeError: If a and b are not integers or floats.
+
+    Examples:
+    >>> add_integers(5, 3.8)
+    8
+
+    >>> add_integers(2.5, 3)
+    5
+    >>> add_integers("5", 3.5)
+    Traceback (most recent call to last):
+        ...
+    TypeError: a must be an integer or b must be an integer
+
