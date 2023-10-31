@@ -4,9 +4,10 @@
 
 class Rectangle:
     """
-    Attribute : 
+    Attribute :
         width: private instance attribute width
         height: private instance attribute height
+
     public instance method def area(self)
     public instance method def perimeter(self)
     """
@@ -42,11 +43,11 @@ class Rectangle:
     def height(self):
         """
         Property to retrieve it
-        
+
         Args: width
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -82,6 +83,6 @@ class Rectangle:
         """
         perimeter = ((self.__width + self.__height) * 2)
         if self.__height == 0 or self.__width == 0:
-             return 0
+            return 0
         else:
             return perimeter
