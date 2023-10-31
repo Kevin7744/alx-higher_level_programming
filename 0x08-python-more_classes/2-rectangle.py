@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
 """ Define class rectangle besed on 1-rectangle.py"""
+
+
 class Rectangle:
     """
     Attribute : 
@@ -32,9 +33,9 @@ class Rectangle:
             Args : width(int)
         """
         if type(value) is not int:
-            raise("width must be an integer")
+            raise TypeError("width must be an integer")
         elif value < 0:
-            raise("width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -58,9 +59,9 @@ class Rectangle:
             ValueError: must be greater than 0
         """
         if type(value) is not int:
-            raise("height must be an integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
