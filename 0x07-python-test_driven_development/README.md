@@ -1,7 +1,29 @@
- 0x07. Python - Test-driven development
+0x07. Python - Test-driven development
+#Author: Kevin Kipkoech
 
-I learned about `docstring` and `unittest` in Python.
 
+ 
+
+### doctest- Testing through documentation
+The purpose of doctest is to write automated tests as part of the documentation for a module.
+Doctest test source code by running examples embedded in the documentation and verifying they produce the expected results. It works by parsing the help text to find examples, running them then comparing the output against the expected value. Many developers find doctest easier to use than unit test because, in its simplest form, there is no APi  to learn before using it.
+#### unittest
+Unittest test case runners allow more options when running tests, like reporting test statictcs as tests that passed and failed.
+Unittests used methods created in classes to manage tests. It has support for automation, setup, and shutdown code when testing. It has several inbuilt features that are unavailable in doctest, including genarators and group fixture managers like setup and teardown.
+
+##### For ALX tasks
+The learning objectives of this project was;
+General
+•	Why Python programming is awesome
+•	What’s an interactive test
+•	Why tests are important
+•	How to write Docstrings to create tests
+•	How to write documentation for each module and function
+•	What are the basic option flags to create tests
+•	How to find edge cases
+
+
+	
 ## Tests :heavy_check_mark:
 
 * [tests](./tests): Test files.
