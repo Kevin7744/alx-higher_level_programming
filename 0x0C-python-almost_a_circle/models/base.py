@@ -26,7 +26,7 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """ Writes the JSOn string representation of list_objs to a file """
@@ -49,7 +49,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """ Creates and return an instance of base class with all attribute 
+        """ Creates and return an instance of base class with all attribute
         already set
         """
         if cls.__name__ == "Rectangle":
