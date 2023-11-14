@@ -40,9 +40,38 @@ class Base:
         with open(filename, "w") as f:
             f.write(json_str)
 
-    @statucmethod
+    @staticmethod
     def from_json_string(json_string):
         """ Returns the list of the jsson string representation json string """
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Creates and return an instance of base class with all attribute 
+        already set
+        """
+        if cls.__name__ == "Rectangle":
+            my_obj = cls(1, 1)
+        elif cls.__name__ == "Square":
+            my_obj = cls(1)
+        else:
+            return None
+        my_obj.update(**dictionary)
+        return my_obj
+
+    @classmethod
+    def load_from_file(cls):
+        """ Creates from a dictionary of existing instance of a class """
+        instance_list = []
+        filename = "{}.json".format(cls.__name__)
+        try:
+            with open(filename, 'r', encoding="utf-8") as f:
+                string = f.read()
+                json_string = cls.from_json_string(string)
+                instance_list = [cls.create(**inst) for inst in json_string]
+                return instance_list
+
+        except FileNotFoundError:
+            return instance_list
