@@ -2,6 +2,7 @@
 """
 Definition of class Base
 """
+import json
 
 
 class Base:
@@ -11,9 +12,17 @@ class Base:
         id: default None
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
-        if id != None:
+        if id is not None:
             self.id = id
-        else: 
+        else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ Returns a JSONstring representation """
+        if list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
